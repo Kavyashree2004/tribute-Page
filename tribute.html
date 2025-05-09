@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tribute to Kuvempu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #52a252;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      color: #222;
+    }
+
+    h1, h2 {
+      margin-top: 30px;
+      text-shadow: 2px 2px 5px white;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 2.5em;
+    }
+
+    .image-container {
+      margin-top: 40px;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .bio {
+      max-width: 700px;
+      margin: 30px auto;
+      font-size: 1.2em;
+      line-height: 1.8;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .button {
+      display: inline-block;
+      margin: 40px 10px 20px;
+      padding: 10px 20px;
+      background-color: #228B22;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #006400;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div id="page1" class="section active">
+    <h1>Kuvempu</h1>
+    <div class="image-container">
+      <img src="C:\Users\kavya\Downloads\kuvempu.jpg" alt="Kuvempu">
+    </div>
+    <button class="button" onclick="showPage('page2')">Read Biography</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="section">
+    <h2>About Kuvempu</h2>
+    <div class="bio">
+      <p><strong>Kuppali Venkatappa Puttappa</strong>, popularly known as Kuvempu, was a towering figure in Kannada literature. He was the first Kannada writer to receive the Jnanpith Award and is widely regarded as one of the greatest poets of the 20th century.</p>
+      <p>He advocated for "Vishwamanava" — the universal man — and his works are known for their depth, spirituality, and strong message of unity. His contributions have left a lasting legacy in Indian literature and culture.</p>
+    </div>
+    <button class="button" onclick="showPage('page1')">Back to Home</button>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.remove('active');
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
